@@ -25,7 +25,6 @@ public class MainFragment extends Fragment {
     CategoryAdapter categoryAdapter;
     EventAdapter eventAdapter;
 
-    //New line
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
