@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MPEIapp</string>
+    <string name="logo_mpei">logo_mpei</string>
+    <string name="contacts">Контакты</string>
+    <string name="main_scene_text">Главная</string>
+    <string name="title">ПРИЁМНАЯ КОМИССИЯ</string>
+    <string name="start_time_text">Начало -</string>
+    <string name="online_platform_text">Онлайн платформы</string>
+    <string name="address">г. Москва, ул. Красноказарменная, д. 17 метро Авиамоторная</string>
+    <string name="youtube">YouTube</string>
+    <string name="vk">VK</string>
+</resources>
