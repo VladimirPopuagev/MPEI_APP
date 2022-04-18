@@ -9,4 +9,15 @@
     <string name="address">г. Москва, ул. Красноказарменная, д. 17 метро Авиамоторная</string>
     <string name="youtube">YouTube</string>
     <string name="vk">VK</string>
+    <string name="title_info_event">Что вас ждёт?</string>
+    <string name="building_icon">building_icon</string>
+    <string name="getting_to_know">Знакомство с универститетом</string>
+    <string name="education_icon">education_icon</string>
+    <string name="education_text">Участие в мастер-классах</string>
+    <string name="info_icon">info_icon</string>
+    <string name="info_event_text">Презентации институтов, входящие в состав НИУ “МЭИ”</string>
+    <string name="excursion_icon">excursion_icon</string>
+    <string name="excursion_text">Экскурсии в лаборатории, общежития и военный учебный центр</string>
+    <string name="go_to_schedule_text">График проведения “дня открытых дверей” уточняй здесь</string>
+    <string name="button_back_to_registr">button back to registr</string>
 </resources>

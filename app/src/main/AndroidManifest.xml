@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MPEIapp">
         <activity
-            android:name=".EventActivity"
+            android:name=".Event.EventActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -8,10 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mpeiapp.EventActivity;
+import com.example.mpeiapp.Event.EventActivity;
 import com.example.mpeiapp.R;
 import com.example.mpeiapp.model.Event;
 

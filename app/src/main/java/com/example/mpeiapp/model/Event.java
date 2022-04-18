@@ -7,6 +7,13 @@ public class Event {
     String short_description;
     String date;
 
+    // Поля, которые надо добавить
+    /*
+    * Проведено мероприятие или нет (true и false)
+    * Ссылка на гугл форму для регистрации
+
+    * */
+
     public Event(int id, String title, String short_description, String date) {
         this.id = id;
         this.title = title;
