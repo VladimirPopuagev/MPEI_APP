@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_event">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule"
+        android:textSize="24sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textAllCaps="true"/>
+
+    <Spinner
+        android:id="@+id/spinner_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/type_event"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/background_event"/>
+
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="440dp">
+
+        <FrameLayout
+            android:id="@+id/schedule_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_schedule_back_to_registr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/ic_button_back_to_registr"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_back_to_registr"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

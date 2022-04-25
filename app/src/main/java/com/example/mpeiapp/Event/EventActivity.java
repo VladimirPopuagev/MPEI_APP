@@ -23,7 +23,7 @@ public class EventActivity extends AppCompatActivity {
             eventFragment.setArguments(intentToBundle(getIntent()));
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .add(R.id.event_container_fragment, eventFragment)
+                    .replace(R.id.event_container_fragment, eventFragment)
                     .commit();
         }
     }
@@ -34,7 +34,7 @@ public class EventActivity extends AppCompatActivity {
     private Bundle intentToBundle(Intent intent) {
         Bundle args = new Bundle();
         args.putString("event_date", intent.getStringExtra("event_date"));
-
+        args.putInt("eventIsDone", intent.getIntExtra("eventIsDone", 0));
         return args;
     }
 }

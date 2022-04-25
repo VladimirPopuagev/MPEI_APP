@@ -118,7 +118,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_event"
-        app:srcCompat="@drawable/ic_button_registr" />
+        app:srcCompat="@drawable/ic_button_registr"
+        />
 
 
     <ImageView
@@ -190,6 +191,18 @@
         app:layout_constraintStart_toStartOf="@+id/btn_registr_event"
         app:layout_constraintTop_toBottomOf="@+id/btn_registr_event"
         app:srcCompat="@drawable/ic_button_info"
-        android:background="@android:color/transparent"/>
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/btn_go_to_youTube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/btn_info_event"
+        app:layout_constraintStart_toStartOf="@+id/btn_info_event"
+        app:layout_constraintTop_toBottomOf="@+id/btn_info_event"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ic_button_check"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,18 @@
     <string name="info_event_text">Презентации институтов, входящие в состав НИУ “МЭИ”</string>
     <string name="excursion_icon">excursion_icon</string>
     <string name="excursion_text">Экскурсии в лаборатории, общежития и военный учебный центр</string>
-    <string name="go_to_schedule_text">График проведения “дня открытых дверей” уточняй здесь</string>
+    <string name="go_to_schedule_text">График проведения “дня открытых дверей” уточняй <u>здесь</u></string>
     <string name="button_back_to_registr">button back to registr</string>
+    <string name="schedule">График проведения</string>
+    <string name="offline_schedule_10_11">Открытие. Встреча гостей в холле первого этажа. Получение маршрутного листа гостя. Начало работы демонстрационной зоны.</string>
+    <string name="schedule_text_1100_1145">Приветствие гостей в Большом актовом зале, показательные выступления учеников центра подготовки и переподготовки «Институт развития самбо им. А.А. Харлампиева»</string>
+    <string name="schedule_text_12_14">Первая экскурсионная сессия: помещения институтов</string>
+    <string name="schedule_text_1410_1540">Вторая экскурсионная сессия: общежития и Военный учебный центр.</string>
+    <string name="schedule_text_online_1100_1145">Прямое включение из Большого актового зала. Показательные выступления учеников центра подготовки и переподготовки «Институт развития самбо им. А.А. Харлампиева»</string>
+    <string name="schedule_text_online_1145_1245">Трансляция видеороликов о Национальном исследовательском университете МЭИ и институтах входящих в его состав.</string>
+
+    <string-array name="type_event">
+        <item>Очный формат</item>
+        <item>Онлайн-формат</item>
+    </string-array>
 </resources>

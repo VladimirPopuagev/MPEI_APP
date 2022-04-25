@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_event"
+    android:orientation="vertical"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10:00 - 11:00"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.4"
+            android:layout_gravity="start"
+            android:text="@string/offline_schedule_10_11"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11:00 - 11:45"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.4"
+            android:layout_gravity="start"
+            android:text="@string/schedule_text_1100_1145"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12:00 - 14:00"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.4"
+            android:layout_gravity="start"
+            android:text="@string/schedule_text_12_14"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14:10 - 15:40"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_weight="0.4"
+            android:layout_gravity="start"
+            android:text="@string/schedule_text_1410_1540"/>
+    </LinearLayout>
+
+</LinearLayout>
