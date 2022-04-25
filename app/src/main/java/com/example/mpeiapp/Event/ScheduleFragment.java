@@ -24,7 +24,6 @@ import java.util.HashMap;
 public class ScheduleFragment extends Fragment {
 
     private Spinner spinnerFormat;
-    private SpinnerFormatAdapter spinnerFormatAdapter;
 
     private ImageButton btnBackToRegistr;
 
@@ -96,7 +95,6 @@ public class ScheduleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                EventFragment eventFragment = new EventFragment();
 
                 // remove from stack EventFragment because we return to it
                 fragmentManager.popBackStack(InfoEventFragment.class.getSimpleName(),
