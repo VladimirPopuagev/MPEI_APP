@@ -27,6 +27,17 @@
     <string name="schedule_text_1410_1540">Вторая экскурсионная сессия: общежития и Военный учебный центр.</string>
     <string name="schedule_text_online_1100_1145">Прямое включение из Большого актового зала. Показательные выступления учеников центра подготовки и переподготовки «Институт развития самбо им. А.А. Харлампиева»</string>
     <string name="schedule_text_online_1145_1245">Трансляция видеороликов о Национальном исследовательском университете МЭИ и институтах входящих в его состав.</string>
+    <string name="cd_time_icon">time_icon</string>
+    <string name="schedule_morning">10:00 (очно)</string>
+    <string name="schedule_11_00">11:00 (онлайн)</string>
+    <string name="cd_calendar_icon">cd_calendar_icon</string>
+    <string name="cd_btn_to_registr">button for registration</string>
+    <string name="cd_location_icon">location_icon</string>
+    <string name="full_time">Очно</string>
+    <string name="cd_online_icon">online_icon</string>
+    <string name="cd_btn_info_event">btn_info_event</string>
+    <string name="cd_btn_check_video">btn_check_video</string>
+    <string name="cd_background_item">background_item</string>
 
     <string-array name="type_event">
         <item>Очный формат</item>

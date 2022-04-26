@@ -1,18 +1,27 @@
 package com.example.mpeiapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.AsyncTaskLoader;
+import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mpeiapp.Adapters.CategoryAdapter;
 import com.example.mpeiapp.Adapters.EventAdapter;
+import com.example.mpeiapp.Database.DBdelegate;
+import com.example.mpeiapp.Database.DatabaseAsyncLoader;
+import com.example.mpeiapp.Database.DatabaseDao;
 import com.example.mpeiapp.model.Category;
 import com.example.mpeiapp.model.Event;
 
@@ -25,29 +34,30 @@ public class MainFragment extends Fragment {
     CategoryAdapter categoryAdapter;
     EventAdapter eventAdapter;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container,false);
 
+        DatabaseDao databaseDao = ((DBdelegate) getContext().getApplicationContext()).getDatabase().getDatabaseDao();
+        initialization(v);
+
+        List<Event> postToAdapterList = databaseDao.getEvents();
+
+        setEventAdapter(postToAdapterList);
+
+        return v;
+    }
+
+    private void initialization(View v) {
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1,"Дни открытых дверей"));
         categoryList.add(new Category(2,"Олимпиады"));
 
+        eventRecycler = v.findViewById(R.id.event_recycler);
         categoryRecycler = v.findViewById(R.id.category_recycler);
         setCategoryAdapter(categoryList);
-
-        List<Event> eventList = new ArrayList<>();
-        eventList.add(new Event(4,"День IT-технологий", "Приходите посмотреть на наш классный универ.\n\nТут столько колонн, что голова кружится. В главном корпусе всё классно,но в остальных похуже, но тоже классно. Всем советуем!"
-                ,"5 апреля"));
-        eventList.add(new Event(5,"День программиста", "Ах, какой праздник. Все хотят ими стать.\n\nЭто круче, чем космонавты, так что становись таким же"
-                ,"1 апреля"));
-
-        eventRecycler = v.findViewById(R.id.event_recycler);
-        setEventAdapter(eventList);
-
-
-        return v;
     }
 
     private void setEventAdapter(List<Event> eventList) {
@@ -65,4 +75,5 @@ public class MainFragment extends Fragment {
         categoryAdapter = new CategoryAdapter(getContext(),categoryList);
         categoryRecycler.setAdapter(categoryAdapter);
     }
+
 }

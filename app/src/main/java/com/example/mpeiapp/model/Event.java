@@ -1,24 +1,47 @@
 package com.example.mpeiapp.model;
 
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+/*
+* This class for description Open Door event
+* */
+
+@Entity(tableName = "event")
 public class Event {
-    /*For open door day*/
-    int id;
-    String title;
+    @PrimaryKey
+    @ColumnInfo(name = "id")
+    private int id;
+
+    @ColumnInfo(name = "title")
+    private String title;
+
+    @ColumnInfo(name = "short_desc")
     String short_description;
+
+    @ColumnInfo(name = "date")
     String date;
 
-    // Поля, которые надо добавить
-    /*
-    * Проведено мероприятие или нет (true и false)
-    * Ссылка на гугл форму для регистрации
+    @ColumnInfo(name = "isDone")
+    int isDone;
 
-    * */
 
-    public Event(int id, String title, String short_description, String date) {
+    @Nullable
+    @ColumnInfo(name = "refYouTube")
+    String refYouTube;
+
+    public Event() {
+    }
+
+    public Event(int id, String title, String short_description, String date, int isDone, @Nullable String refYouTube) {
         this.id = id;
         this.title = title;
         this.short_description = short_description;
         this.date = date;
+        this.isDone = isDone;
+        this.refYouTube = refYouTube;
     }
 
     public int getId() {
@@ -51,5 +74,22 @@ public class Event {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public int getIsDone() {
+        return isDone;
+    }
+
+    public void setIsDone(int isDone) {
+        this.isDone = isDone;
+    }
+
+    @Nullable
+    public String getRefYouTube() {
+        return refYouTube;
+    }
+
+    public void setRefYouTube(@Nullable String refYouTube) {
+        this.refYouTube = refYouTube;
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,7 +13,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_head_event" />
+        app:srcCompat="@drawable/ic_head_event"
+        android:contentDescription="@string/app_name"/>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -24,7 +24,8 @@
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/ic_time" />
+        app:srcCompat="@drawable/ic_time"
+        android:contentDescription="@string/cd_time_icon"/>
 
     <TextView
         android:id="@+id/textView"
@@ -43,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="10:00 (очно)"
+        android:text="@string/schedule_morning"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:fontFamily="@font/montserrat"
@@ -57,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/montserrat"
-        android:text="11:00 (онлайн)"
+        android:text="@string/schedule_11_00"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/time_start_intramural"
@@ -71,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_place" />
+        app:srcCompat="@drawable/ic_place"
+        android:contentDescription="@string/cd_online_icon"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -93,7 +95,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:srcCompat="@drawable/ic_date_simbol" />
+        app:srcCompat="@drawable/ic_date_simbol"
+        android:contentDescription="@string/cd_calendar_icon"/>
 
     <!--подчёркивание нужно делать в коде-->
     <TextView
@@ -119,6 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_event"
         app:srcCompat="@drawable/ic_button_registr"
+        android:contentDescription="@string/cd_btn_to_registr"
         />
 
 
@@ -130,14 +134,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/ic_place" />
+        app:srcCompat="@drawable/ic_place"
+        android:contentDescription="@string/cd_location_icon"/>
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="Очно"
+        android:text="@string/full_time"
         android:fontFamily="@font/montserrat"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -191,7 +196,8 @@
         app:layout_constraintStart_toStartOf="@+id/btn_registr_event"
         app:layout_constraintTop_toBottomOf="@+id/btn_registr_event"
         app:srcCompat="@drawable/ic_button_info"
-        android:background="@android:color/transparent" />
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/cd_btn_info_event"/>
 
     <ImageButton
         android:id="@+id/btn_go_to_youTube"
@@ -203,6 +209,7 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/ic_button_check"
         android:background="@android:color/transparent"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:contentDescription="@string/cd_btn_check_video"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
