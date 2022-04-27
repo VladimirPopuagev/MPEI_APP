@@ -42,6 +42,14 @@ public class MainFragment extends Fragment {
 
         DatabaseDao databaseDao = ((DBdelegate) getContext().getApplicationContext()).getDatabase().getDatabaseDao();
         initialization(v);
+        //Для локальной базы данных следующее содержание:
+        List<Event> newDataEvent = new ArrayList<>();
+        newDataEvent.add(new Event(1,"Очный день открытых дверей", "10 апреля 2022 года пройдет день открытых дверей в очном формате (в случае, если позволит эпидемиологическая обстановка)."
+                            , "10 апреля", 1,"https://vk.com/video-31496847_456239129"));
+        newDataEvent.add(new Event(2,"Очный день открытых дверей", "15 мая 2022 года пройдет день открытых дверей в очном формате (в случае, если позволит эпидемиологическая обстановка)."
+                , "15 мая", 0,null));
+
+        databaseDao.insertEvents(newDataEvent);
 
         List<Event> postToAdapterList = databaseDao.getEvents();
 
@@ -77,3 +85,14 @@ public class MainFragment extends Fragment {
     }
 
 }
+
+
+
+//Для локальной базы данных следующее содержание:
+//        List<Event> newDataEvent = new ArrayList<>();
+//        newDataEvent.add(new Event(1,"Очный день открытых дверей", "10 апреля 2022 года пройдет день открытых дверей в очном формате (в случае, если позволит эпидемиологическая обстановка)."
+//                            , "10 апреля", 1,"https://vk.com/video-31496847_456239129"));
+//        newDataEvent.add(new Event(2,"Очный день открытых дверей", "15 мая 2022 года пройдет день открытых дверей в очном формате (в случае, если позволит эпидемиологическая обстановка)."
+//                , "15 мая", 0,null));
+//
+//        databaseDao.insertEvents(newDataEvent);

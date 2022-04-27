@@ -32,6 +32,43 @@ public class EventFragment extends Fragment {
         View v = inflater.inflate(R.layout.event_regist, container,false);
 
         initialization(v);
+        setClickListeners();
+
+        return v;
+    }
+
+    private void goToRef(Uri address) {
+        Intent goToRefIntent = new Intent(Intent.ACTION_VIEW, address);
+
+        if (goToRefIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(goToRefIntent);
+        } else {
+            Toast.makeText(getActivity(), "Ссылка не действительна", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void initialization(View v) {
+        btnInfoEvent = v.findViewById(R.id.btn_info_event);
+        btnGoToRegistr = v.findViewById(R.id.btn_registr_event);
+        btnGoToYouTube = v.findViewById(R.id.btn_go_to_youTube);
+
+        tvRefVK = v.findViewById(R.id.vk_ref);
+        tvRefYouTube = v.findViewById(R.id.youTube_ref);
+
+        tv_date_event = v.findViewById(R.id.tv_date_event);
+        tv_date_event.setText(getArguments().getString("event_date"));
+
+        if (getArguments().getInt("eventIsDone", 0) != 0) {
+            btnGoToRegistr.setVisibility(View.GONE);
+            btnInfoEvent.setVisibility(View.GONE);
+            btnGoToYouTube.setVisibility(View.VISIBLE);
+        } else {
+            btnGoToRegistr.setVisibility(View.VISIBLE);
+            btnGoToYouTube.setVisibility(View.GONE);
+        }
+    }
+
+    private void setClickListeners() {
         btnInfoEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,47 +97,13 @@ public class EventFragment extends Fragment {
             }
         });
 
-        btnGoToRegistr.setOnClickListener(new View.OnClickListener() {
+        btnGoToYouTube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Uri uri = Uri.parse("https://www.youtube.com/channel/UCHnoFt6cHD2BIRJvR41Mqng");
-                goToRef(uri);*/
-                Toast.makeText(getActivity(), "Та самая ссылка на гугл форму", Toast.LENGTH_SHORT).show();
+                Uri uri = Uri.parse("https://vk.com/video-31496847_456239129");
+                goToRef(uri);
+                //Toast.makeText(getActivity(), "Та самая ссылка на гугл форму", Toast.LENGTH_SHORT).show();
             }
         });
-
-        return v;
-    }
-
-    private void goToRef(Uri address) {
-        Intent goToRefIntent = new Intent(Intent.ACTION_VIEW, address);
-
-        if (goToRefIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-            startActivity(goToRefIntent);
-        } else {
-            Toast.makeText(getActivity(), "Ссылка не действительна", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    void initialization(View v) {
-        btnInfoEvent = v.findViewById(R.id.btn_info_event);
-        btnGoToRegistr = v.findViewById(R.id.btn_registr_event);
-        btnGoToYouTube = v.findViewById(R.id.btn_go_to_youTube);
-
-        tvRefVK = v.findViewById(R.id.vk_ref);
-        tvRefYouTube = v.findViewById(R.id.youTube_ref);
-
-        tv_date_event = v.findViewById(R.id.tv_date_event);
-        tv_date_event.setText(getArguments().getString("event_date"));
-
-        if (getArguments().getInt("eventIsDone", 0) != 0) {
-            btnGoToRegistr.setVisibility(View.GONE);
-            btnInfoEvent.setVisibility(View.GONE);
-            btnGoToYouTube.setVisibility(View.VISIBLE);
-        } else {
-            btnGoToRegistr.setVisibility(View.VISIBLE);
-            btnGoToYouTube.setVisibility(View.GONE);
-        }
     }
 }

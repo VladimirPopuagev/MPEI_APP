@@ -47,6 +47,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
                 goToEvent.putExtra("eventTitle",eventList.get(position).getTitle());
                 goToEvent.putExtra("event_date",eventList.get(position).getDate());
                 goToEvent.putExtra("eventIsDone", eventList.get(position).getIsDone());
+                goToEvent.putExtra("eventRefYouTube",eventList.get(position).getRefYouTube());
 
                 context.startActivity(goToEvent);
             }

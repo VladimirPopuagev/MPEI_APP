@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Contacts"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="32sp"
+        android:textColor="@color/blue_mpei"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/telegram"
+            android:textSize="28sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blue_mpei"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_telegram_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_telegram_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/telegram" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vk_string"
+            android:textSize="28sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blue_mpei"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_vk_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_vk_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/telegram" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/our_site"
+            android:textSize="28sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blue_mpei"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_site_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_contact_mpei_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/telegram" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blue_mpei"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_priem_com"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/blue_mpei"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_text"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blue_mpei"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/blue_mpei"
+            android:gravity="center"
+            android:text="@string/email_priem_com"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

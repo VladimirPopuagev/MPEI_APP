@@ -38,6 +38,14 @@
     <string name="cd_btn_info_event">btn_info_event</string>
     <string name="cd_btn_check_video">btn_check_video</string>
     <string name="cd_background_item">background_item</string>
+    <string name="Contacts">Контакты</string>
+    <string name="telegram">Telegram</string>
+    <string name="vk_string">Вконтакте</string>
+    <string name="our_site">Наш сайт</string>
+    <string name="mobile">Телефон</string>
+    <string name="mobile_priem_com">+7 (495) 362-77-77</string>
+    <string name="email_text">почта</string>
+    <string name="email_priem_com">PK@mpei.ru</string>
 
     <string-array name="type_event">
         <item>Очный формат</item>

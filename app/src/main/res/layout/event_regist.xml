@@ -206,7 +206,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_info_event"
         app:layout_constraintStart_toStartOf="@+id/btn_info_event"
         app:layout_constraintTop_toBottomOf="@+id/btn_info_event"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         app:srcCompat="@drawable/ic_button_check"
         android:background="@android:color/transparent"
         android:visibility="gone"
