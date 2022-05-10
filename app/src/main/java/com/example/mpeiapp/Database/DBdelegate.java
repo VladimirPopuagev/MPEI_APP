@@ -12,6 +12,7 @@ public class DBdelegate extends Application {
         super.onCreate();
 
         databaseEvent = Room.databaseBuilder(getApplicationContext(), DatabaseEvent.class, "database_event")
+                .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
     }

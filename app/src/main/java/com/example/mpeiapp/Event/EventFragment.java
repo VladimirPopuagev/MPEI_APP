@@ -69,41 +69,34 @@ public class EventFragment extends Fragment {
     }
 
     private void setClickListeners() {
-        btnInfoEvent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                InfoEventFragment infoFragment = new InfoEventFragment();
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.event_container_fragment, infoFragment)
-                        .addToBackStack(EventFragment.class.getSimpleName())
-                        .commit();
-            }
+        btnInfoEvent.setOnClickListener(view -> {
+            InfoEventFragment infoFragment = new InfoEventFragment();
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.event_container_fragment, infoFragment)
+                    .addToBackStack(EventFragment.class.getSimpleName())
+                    .commit();
         });
 
-        tvRefVK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://vk.com/pkmpeiofficial");
-                goToRef(uri);
-            }
+        tvRefVK.setOnClickListener(view -> {
+            Uri uri = Uri.parse("https://vk.com/pkmpeiofficial");
+            goToRef(uri);
         });
 
-        tvRefYouTube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://www.youtube.com/channel/UCHnoFt6cHD2BIRJvR41Mqng");
-                goToRef(uri);
-            }
+        tvRefYouTube.setOnClickListener(view -> {
+            Uri uri = Uri.parse("https://www.youtube.com/channel/UCHnoFt6cHD2BIRJvR41Mqng");
+            goToRef(uri);
         });
 
-        btnGoToYouTube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://vk.com/video-31496847_456239129");
+        btnGoToYouTube.setOnClickListener(view -> {
+            Uri uri = null;
+            if (getArguments().getString("eventRefYouTube") != null) {
+
+                uri = Uri.parse(getArguments().getString("eventRefYouTube"));
                 goToRef(uri);
-                //Toast.makeText(getActivity(), "Та самая ссылка на гугл форму", Toast.LENGTH_SHORT).show();
             }
+
+            //Toast.makeText(getActivity(), "Та самая ссылка на гугл форму", Toast.LENGTH_SHORT).show();
         });
     }
 }

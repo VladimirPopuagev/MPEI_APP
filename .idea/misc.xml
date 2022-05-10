@@ -10,7 +10,8 @@
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1315" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/drawable/ic_logo_mpei.xml" value="0.2265" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/drawable/ic_mpei_cool_logo.xml" value="0.2265" />
-        <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/activity_main.xml" value="0.213768115942029" />
+        <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout-v28/olympiad_item.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/category_item.xml" value="0.213768115942029" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/contacts_main.xml" value="0.213768115942029" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/event_item.xml" value="0.213768115942029" />
@@ -19,6 +20,7 @@
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/fragment_main.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/info_event_layout.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/offline_schedule_layout.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/olympiad_item.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/online_schedule_layout.xml" value="0.213768115942029" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/schedule_layout.xml" value="0.213768115942029" />
         <entry key="..\:/AndroidProjects/MPEIapp/app/src/main/res/layout/spinner_format_item.xml" value="0.536" />

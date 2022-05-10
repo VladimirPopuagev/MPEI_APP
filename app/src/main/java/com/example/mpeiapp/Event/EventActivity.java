@@ -35,6 +35,7 @@ public class EventActivity extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("event_date", intent.getStringExtra("event_date"));
         args.putInt("eventIsDone", intent.getIntExtra("eventIsDone", 0));
+        args.putString("eventRefYouTube", intent.getStringExtra("eventRefYouTube"));
         return args;
     }
 }

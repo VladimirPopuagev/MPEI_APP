@@ -25,16 +25,15 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Fields for describing the side menu
     TextView mainSceneText;
-    TextView contactsScene;
+    TextView contactsSceneText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initialization();
-
 
         if (savedInstanceState == null) {
             Fragment new_fragment =new MainFragment();
@@ -45,31 +44,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    * Initialization procedure (void)
+    * initialize the interface, set the text color and set click listeners
+    * */
     private void initialization() {
         mainSceneText = findViewById(R.id.main_scene);
-        contactsScene = findViewById(R.id.contacts);
+        contactsSceneText = findViewById(R.id.contacts);
 
         mainSceneText.setTextColor(getResources().getColor(R.color.blue_mpei));
-        contactsScene.setTextColor(getResources().getColor(R.color.black));
+        contactsSceneText.setTextColor(getResources().getColor(R.color.black));
 
-        contactsScene.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pushOnContacts();
-            }
-        });
+        contactsSceneText.setOnClickListener(view -> pushOnContacts());
 
-        mainSceneText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pushOnMain();
-            }
-        });
+        mainSceneText.setOnClickListener(view -> pushOnMain());
     }
 
+
+    /*
+    * Procedure (void) clicking on the "Main" button
+    * Changes the text color and replaces the fragment in the container
+    * */
     private void pushOnMain() {
         mainSceneText.setTextColor(getResources().getColor(R.color.blue_mpei));
-        contactsScene.setTextColor(getResources().getColor(R.color.black));
+        contactsSceneText.setTextColor(getResources().getColor(R.color.black));
 
         Fragment new_fragment =new MainFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -80,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void pushOnContacts() {
         mainSceneText.setTextColor(getResources().getColor(R.color.black));
-        contactsScene.setTextColor(getResources().getColor(R.color.blue_mpei));
+        contactsSceneText.setTextColor(getResources().getColor(R.color.blue_mpei));
 
         Fragment contactFragment =new ContactsFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();

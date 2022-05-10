@@ -19,7 +19,7 @@ import java.util.List;
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder> {
 
     Context context;
-    List<Event> eventList;
+    List<Event> eventList; // list with information about the events from the database
 
     public EventAdapter(Context context, List<Event> eventList) {
         this.context = context;
@@ -39,18 +39,16 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
         holder.event_description.setText(eventList.get(position).getShort_description());
         holder.event_date.setText(eventList.get(position).getDate());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToEvent = new Intent(context, EventActivity.class);
+        holder.itemView.setOnClickListener(view -> {
+            Intent goToEvent = new Intent(context, EventActivity.class);
 
-                goToEvent.putExtra("eventTitle",eventList.get(position).getTitle());
-                goToEvent.putExtra("event_date",eventList.get(position).getDate());
-                goToEvent.putExtra("eventIsDone", eventList.get(position).getIsDone());
-                goToEvent.putExtra("eventRefYouTube",eventList.get(position).getRefYouTube());
+            goToEvent.putExtra("eventTitle",eventList.get(position).getTitle());
+            goToEvent.putExtra("event_date",eventList.get(position).getDate());
+            goToEvent.putExtra("eventIsDone", eventList.get(position).getIsDone());
+            goToEvent.putExtra("eventRefYouTube",eventList.get(position).getRefYouTube());
 
-                context.startActivity(goToEvent);
-            }
+
+            context.startActivity(goToEvent);
         });
     }
 
@@ -60,7 +58,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
     }
 
     public static final class EventHolder extends RecyclerView.ViewHolder {
-
         TextView event_title;
         TextView event_description;
         TextView event_date;

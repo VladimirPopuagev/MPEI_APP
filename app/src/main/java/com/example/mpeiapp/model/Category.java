@@ -1,7 +1,10 @@
 package com.example.mpeiapp.model;
 
+
 public class Category {
+
     int id;
+
     String title;
 
     public Category(int id, String title) {

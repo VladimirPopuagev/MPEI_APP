@@ -27,7 +27,6 @@ public class Event {
     @ColumnInfo(name = "isDone")
     int isDone;
 
-
     @Nullable
     @ColumnInfo(name = "refYouTube")
     String refYouTube;

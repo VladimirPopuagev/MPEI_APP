@@ -43,9 +43,12 @@
     <string name="vk_string">Вконтакте</string>
     <string name="our_site">Наш сайт</string>
     <string name="mobile">Телефон</string>
-    <string name="mobile_priem_com">+7 (495) 362-77-77</string>
+    <string name="mobile_priem_com">+7 (495) 362–77–77</string>
     <string name="email_text">почта</string>
     <string name="email_priem_com">PK@mpei.ru</string>
+    <string name="eventTitle">Дни открытых дверей</string>
+    <string name="olympiadTitle">Олимпиады</string>
+    <string name="image_for_olympiad">image_for_olympiad</string>
 
     <string-array name="type_event">
         <item>Очный формат</item>
